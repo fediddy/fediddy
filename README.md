@@ -67,11 +67,20 @@ Deployed publicly on Cloudflare / Docker. Owned every layer from data model to d
 
 ---
 
-### 📣 MPV2 Outreach — AI Outreach Pipeline
-**186 commits · May 2026 – present · JavaScript, CSS, Jinja2**
+### 📣 MPV2 Outreach — AI Cold-Outreach & Voice Pipeline
+**186 commits · May 2026 – present · Python, JavaScript, Jinja2, Flask**
 
-An automated outreach system that identifies and contacts business owners, with
-templated content generation and a delivery pipeline.
+An original cold-outreach system for local-business lead generation: scrape →
+enrich → mockup → email/voice → reply. Built from the ground up — I started in a
+fork, cleared out the original code, and built my own product in its place:
+- A **20-command CLI** and a Command Center dashboard (Flask + Alpine.js).
+- **AI voice calling** via VAPI — Cartesia, Deepgram, and LiveKit smart endpointing.
+- A **qualify-first pretext pitch across 14 niches** plus a post-call question
+  analyzer.
+- An integrated CRM (~150 Python modules, 800+ JS files).
+
+The work and architecture are mine; only the initial repo scaffold traces to an
+open-source starting point.
 
 ---
 
