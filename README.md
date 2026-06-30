@@ -32,27 +32,40 @@ No CS degree. The work is the portfolio — that's what this page is.
 ## Flagship Projects
 
 ### 🧠 Aelise — AI SEO Intelligence Engine & Fleet Site Builder
-**4,345 commits · Aug 2025 – present · TypeScript, Jinja2, JavaScript, SCSS**
+**4,345 commits · Aug 2025 – present · TypeScript, Python, Jinja2, SCSS**
 
-An AI-driven SEO intelligence platform plus an automated multi-site builder. Includes:
-- A **re-runnable ranking-factor mining pipeline** analyzing 300+ ranking factors.
-- A **geo-scoped knowledge-graph** data model for entity-oriented SEO.
-- A **templated fleet builder** that generates and deploys complete sites from
-  per-theme build contracts, with build/validation gates and deployment wiring.
+An AI-driven SEO intelligence platform plus an automated multi-site builder.
 
-I designed the data model, the build/validation gates, the deploy pipeline, and the
-quality checks. This is RAG, structured generation, and evaluation discipline at scale.
+**What it does**
+- A **re-runnable ranking-factor mining pipeline** that analyzes 300+ SEO ranking
+  factors and feeds an entity-oriented, **geo-scoped knowledge-graph** data model.
+- A **templated fleet builder** (Eleventy + Jinja2) that generates and deploys
+  complete sites from per-theme build contracts, gated by build/validation checks.
+
+**Real stack** *(from package.json)*
+- **AI/LLM:** Anthropic SDK (`@anthropic-ai/sdk`), HuggingFace Inference,
+  Google Cloud Natural Language API for entity extraction.
+- **Data/infra:** Neon serverless Postgres, GitHub API (Octokit) for fleet ops,
+  Cloudflare Workers/Wrangler for deploy.
+- **Observability:** full OpenTelemetry instrumentation (SDK, OTLP exporter, auto-instrumentation).
+- **Scale:** ~2,100 TypeScript files, ~100 Python pipeline scripts, **820 test files**, 19 branches.
 
 ---
 
 ### 📞 VoiceBusinessAgentAI — Production AI Voice Agent
-**1,490 commits · Apr 2025 – present · TypeScript, React (TSX), YAML**
+**1,490 commits · Apr 2025 – present · TypeScript, React, Node**
 
-An AI agent that places **real phone calls** to business owners and handles live
-conversation — scripting, turn-taking, and follow-up. Production voice + LLM
-orchestration with hard attention to latency, dead-air, and natural turn-taking.
-This is the "unglamorous infrastructure that makes LLMs production-grade": streaming,
-retries, fallbacks, and reliability under real call traffic.
+An AI agent ("CallHandle") that places and handles **real phone calls** with live,
+low-latency conversation — scripting, turn-taking, and follow-up across many
+industry niches.
+
+**Real stack** *(from package.json)*
+- **Voice/LLM:** Deepgram SDK (speech-to-text), Anthropic SDK, and the
+  **Model Context Protocol SDK** (`@modelcontextprotocol/sdk`) for tool/agent wiring.
+- **Frontend/control:** React + Radix UI component system for the operator dashboard.
+- **Data:** Neon serverless Postgres; Notion API integration for knowledge sync.
+- **Engineering focus:** latency, dead-air elimination, natural turn-taking,
+  streaming with retries and fallbacks. ~2,366 files, **375 test files**, 11 branches.
 
 ---
 
@@ -62,22 +75,32 @@ retries, fallbacks, and reliability under real call traffic.
 A multi-user web app that searches job boards, scores listings against a profile,
 tracks applications, and generates **court-verifiable PDF reports** with **SHA-256
 hash verification** and public verify URLs — so a third party can confirm a report
-wasn't altered. Full auth, compliance audit trail, backups, and a **60-test suite**.
-Deployed publicly on Cloudflare / Docker. Owned every layer from data model to deploy.
+wasn't altered.
+
+**Real stack** *(from requirements.txt)*
+- **Backend:** Flask + Flask-Login + bcrypt auth, SQLite, itsdangerous-signed sessions.
+- **Job sourcing:** python-jobspy (Indeed/LinkedIn/Glassdoor/ZipRecruiter) + free APIs
+  (Adzuna, Jooble, USAJobs, Remotive); BeautifulSoup + Selenium for scrape/autofill.
+- **AI scoring:** Anthropic + OpenAI SDKs for listing-fit scoring and cover letters.
+- **Reporting:** ReportLab PDF generation with SHA-256 verification, openpyxl exports.
+- **Quality:** **60-test pytest suite** (pytest-flask), deployed on Cloudflare/Docker.
 
 ---
 
 ### 📣 MPV2 Outreach — AI Cold-Outreach & Voice Pipeline
 **186 commits · May 2026 – present · Python, JavaScript, Jinja2, Flask**
 
-An original cold-outreach system for local-business lead generation: scrape →
-enrich → mockup → email/voice → reply. Built from the ground up — I started in a
-fork, cleared out the original code, and built my own product in its place:
-- A **20-command CLI** and a Command Center dashboard (Flask + Alpine.js).
-- **AI voice calling** via VAPI — Cartesia, Deepgram, and LiveKit smart endpointing.
-- A **qualify-first pretext pitch across 14 niches** plus a post-call question
-  analyzer.
-- An integrated CRM (~150 Python modules, 800+ JS files).
+An original cold-outreach system for local-business lead generation:
+scrape → enrich → mockup → email/voice → reply. Built from the ground up — I started
+in a fork, cleared out the original code, and built my own product in its place.
+
+**What it does / real stack** *(from requirements.txt)*
+- **20-command CLI** + a Command Center dashboard (Flask + Flask-Limiter + Alpine.js).
+- **Scraping/enrichment:** Playwright (headless browser), BeautifulSoup, dnspython.
+- **AI voice calling:** VAPI orchestration — Cartesia (TTS), Deepgram, LiveKit smart
+  endpointing — with a qualify-first pretext pitch across 14 niches + post-call analyzer.
+- **Delivery/CRM:** Twilio + Android SMS Gateway, Stripe billing, ReportLab/Pillow mockups,
+  integrated CRM. ~150 Python modules, ~829 JS files, **pytest + pytest-cov** tested.
 
 The work and architecture are mine; only the initial repo scaffold traces to an
 open-source starting point.
