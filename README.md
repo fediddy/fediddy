@@ -8,7 +8,9 @@ No CS degree. The work is the portfolio — that's what this page is.
 
 📍 Concord, CA (San Francisco Bay Area) · Remote-friendly
 ✉️ fediddy@gmail.com
-🔗 GitHub: [github.com/fediddy](https://github.com/fediddy) · 🌐 Live: [mysearchlog.com](https://mysearchlog.com)
+🔗 Live product: [mysearchlog.com](https://mysearchlog.com) · GitHub: github.com/fediddy
+*(Most repos are private — they hold live-client and proprietary work. Happy to give
+a screen-share walkthrough, a scoped read-only invite, or a live work trial on request.)*
 
 > **Open to:** Applied AI · AI Operations / Enablement · Solutions / Forward-Deployed
 > Engineering · AI Evaluation. Judge me on the products below.
@@ -164,7 +166,14 @@ valuation, collateral lending, inventory, cash handling, and team coordination.
 
 ## Notes
 
-- **No CS degree — self-taught.** My code and live products are the portfolio; happy to
-  be evaluated on real problems, take-homes, or live work trials.
-- Everything on this page is verifiable: commit counts and dates come straight from the
-  project git histories.
+- **No CS degree — self-taught.** The work is the portfolio.
+- **Why the repos are private:** they contain live-client deployments, proprietary
+  SEO/AI methods, and revenue-generating systems — not toy projects. That's exactly
+  why there's real IP to protect. I'm glad to prove the work directly:
+  - **MySearchLog is fully live and public** — try it at mysearchlog.com.
+  - **Screen-share walkthrough** of any private repo (architecture, code, commit history).
+  - **Scoped read-only invite** to a specific repo for a serious conversation.
+  - **Live work trial or take-home** — evaluate me on a real problem, not a résumé.
+- **Everything on this page is verifiable.** Commit counts, file counts, and the
+  70k-symbol index come straight from the project git histories and tooling — I can
+  screen-share any of them on request.
