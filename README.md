@@ -7,7 +7,7 @@ and other LLMs every day: agents, automation pipelines, voice systems, and full 
 No CS degree. The work is the portfolio — that's what this page is.
 
 📍 Concord, CA (San Francisco Bay Area) · Remote-friendly
-✉️ fediddy@gmail.com · 📞 (925) 788-5150
+✉️ fediddy@gmail.com
 🔗 GitHub: [github.com/fediddy](https://github.com/fediddy) · 🌐 Live: [mysearchlog.com](https://mysearchlog.com)
 
 > **Open to:** Applied AI · AI Operations / Enablement · Solutions / Forward-Deployed
