@@ -31,24 +31,37 @@ No CS degree. The work is the portfolio — that's what this page is.
 
 ## Flagship Projects
 
-### 🧠 Aelise — AI SEO Intelligence Engine & Fleet Site Builder
-**4,345 commits · Aug 2025 – present · TypeScript, Python, Jinja2, SCSS**
+### 🧠 Aelise — AI SEO Intelligence Platform & Fleet Site Builder
+**4,345 commits · Aug 2025 – present · TypeScript, Python, Jinja2 · ~16 GB, 70k+ indexed symbols**
 
-An AI-driven SEO intelligence platform plus an automated multi-site builder.
+My largest and deepest build: a full **SEO intelligence platform** with a fleet of
+analytical engines, plus an automated multi-site builder. Not a thin wrapper around
+an LLM API — a real system with hand-implemented statistical and ML machinery.
 
-**What it does**
-- A **re-runnable ranking-factor mining pipeline** that analyzes 300+ SEO ranking
-  factors and feeds an entity-oriented, **geo-scoped knowledge-graph** data model.
+**Intelligence engines** *(implemented from the math up, in `server/intelligence-engines/`)*
+- **Forecasting & time-series:** ARIMA implementation, PELT changepoint detection.
+- **ML / pattern mining:** Bayesian networks, Isolation Forest (anomaly detection),
+  FP-Growth (frequent-pattern mining), MDS, Jaro-Winkler string similarity.
+- **Causal inference:** a full causal-SEO framework — experiment assignment,
+  confounder handling, causal monitoring, and A/B statistical testing.
+- **Generative & competitive:** Markov content generator, AI agent-swarm engine,
+  competitive-dominance and gap analyzers, SERP orchestration, CIELAB ΔE2000 color
+  science for design analysis.
+
+**Architecture & scale**
+- **631 service modules · 202 API routes · 143 DB migrations**; GitNexus indexes the
+  codebase at **70,354 symbols / 124,269 relationships / 300 execution flows**.
+- A **re-runnable ranking-factor mining pipeline** over 300+ factors feeding an
+  entity-oriented, **geo-scoped knowledge-graph** model.
 - A **templated fleet builder** (Eleventy + Jinja2) that generates and deploys
-  complete sites from per-theme build contracts, gated by build/validation checks.
+  complete sites from per-theme build contracts, behind build/validation gates.
 
 **Real stack** *(from package.json)*
-- **AI/LLM:** Anthropic SDK (`@anthropic-ai/sdk`), HuggingFace Inference,
-  Google Cloud Natural Language API for entity extraction.
-- **Data/infra:** Neon serverless Postgres, GitHub API (Octokit) for fleet ops,
-  Cloudflare Workers/Wrangler for deploy.
-- **Observability:** full OpenTelemetry instrumentation (SDK, OTLP exporter, auto-instrumentation).
-- **Scale:** ~2,100 TypeScript files, ~100 Python pipeline scripts, **820 test files**, 19 branches.
+- **AI/LLM:** Anthropic SDK, HuggingFace Inference, Google Cloud Natural Language API.
+- **Data/infra:** Neon serverless Postgres, Redis (caching + job queues), GitHub API
+  (Octokit) for fleet ops, Cloudflare Workers/Wrangler for deploy.
+- **Observability:** full OpenTelemetry instrumentation (SDK, OTLP exporter, auto-instr).
+- **Quality:** ~2,100 TypeScript files, ~100 Python scripts, **820 test files**, 19 branches.
 
 ---
 
