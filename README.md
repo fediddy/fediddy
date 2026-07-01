@@ -67,20 +67,27 @@ an LLM API — a real system with hand-implemented statistical and ML machinery.
 
 ---
 
-### 📞 VoiceBusinessAgentAI — Production AI Voice Agent
+### 📞 VoiceBusinessAgentAI — Production AI Phone Receptionist ("CallHandle")
 **1,490 commits · Apr 2025 – present · TypeScript, React, Node**
 
-An AI agent ("CallHandle") that places and handles **real phone calls** with live,
-low-latency conversation — scripting, turn-taking, and follow-up across many
-industry niches.
+A multi-tenant AI voice agent that **answers inbound business calls** and handles
+them end to end — routing, live conversation, and task completion across 80+
+industry types. When a customer calls a business, the agent greets them, pulls the
+business's industry-specific knowledge base, and handles the request: booking
+appointments, taking orders, checking availability, verifying insurance, and
+qualifying leads — documenting the call and handing off when needed.
 
 **Real stack** *(from package.json)*
-- **Voice/LLM:** Deepgram SDK (speech-to-text), Anthropic SDK, and the
-  **Model Context Protocol SDK** (`@modelcontextprotocol/sdk`) for tool/agent wiring.
-- **Frontend/control:** React + Radix UI component system for the operator dashboard.
-- **Data:** Neon serverless Postgres; Notion API integration for knowledge sync.
-- **Engineering focus:** latency, dead-air elimination, natural turn-taking,
-  streaming with retries and fallbacks. ~2,366 files, **375 test files**, 11 branches.
+- **Voice/telephony:** VAPI.ai (`@vapi-ai/web`) for voice workflows, Twilio for
+  SMS/voice, ElevenLabs for speech synthesis, Deepgram SDK for speech-to-text.
+- **LLM:** OpenAI (GPT-4o) + Anthropic SDK for conversation intelligence; MCP SDK
+  (`@modelcontextprotocol/sdk`) for tool/agent wiring.
+- **Data/infra:** Neon serverless Postgres (Drizzle ORM, ~53 tables), Notion API
+  for knowledge sync, WebSockets for real-time updates.
+- **Product:** per-business knowledge bases, lead-qualification + booking flows,
+  per-call cost tracking, A/B testing, and an operator dashboard (React + Radix UI).
+- **Scale:** ~2,366 files, 11 branches; engineering focus on latency
+  (multi-tier caching), natural turn-taking, and reliable inbound call handling.
 
 ---
 
